@@ -16,7 +16,6 @@ class HandlebarsAssetPipelineGrailsPlugin {
     def scm = [ url: "http://github.com/bertramdev/handlebars-grails-asset-pipeline" ]
 
     def doWithDynamicMethods = { ctx ->
-        println "Adding Handlebars definition"
         AssetHelper.assetSpecs << HandlebarsAssetFile
     }
 }

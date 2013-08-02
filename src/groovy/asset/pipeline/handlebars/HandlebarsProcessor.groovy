@@ -64,7 +64,7 @@ class HandlebarsProcessor {
   }
 
   def relativePath(file, templateRoot, templateSeperator) {
-    def path          = file.getParent().split(File.separator)
+    def path          = file.getParent().split(AssetHelper.QUOTED_FILE_SEPARATOR)
     def startPosition = path.findLastIndexOf{ it == templateRoot }
 
     if(startPosition+1 >= path.length) {
