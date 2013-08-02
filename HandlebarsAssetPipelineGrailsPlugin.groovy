@@ -2,7 +2,7 @@ import asset.pipeline.AssetHelper
 import asset.pipeline.handlebars.HandlebarsAssetFile
 
 class HandlebarsAssetPipelineGrailsPlugin {
-    def version = "1.0.0-RC4"
+    def version = "1.0.0-RC4.1"
     def grailsVersion = "2.0 > *"
     def title = "Handlebars Asset-Pipeline Plugin"
     def author = "David Estes"
