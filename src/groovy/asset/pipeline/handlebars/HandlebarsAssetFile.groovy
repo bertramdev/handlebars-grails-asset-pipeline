@@ -7,9 +7,11 @@ class HandlebarsAssetFile {
 	static processors = [HandlebarsProcessor]
 
 	File file
+	def baseFile
 
-	HandlebarsAssetFile(file) {
+	HandlebarsAssetFile(file, baseFile=null) {
 		this.file = file
+		this.baseFile = baseFile
 	}
 
 	def processedStream() {
