@@ -4,15 +4,15 @@ import org.mozilla.javascript.Context
 import org.mozilla.javascript.Scriptable
 import org.springframework.core.io.ClassPathResource
 import org.codehaus.groovy.grails.commons.ApplicationHolder
-// CoffeeScript engine uses Mozilla Rhino to compile the CoffeeScript template
-// using existing javascript in-browser compiler
+
 class HandlebarsProcessor {
 
   Scriptable globalScope
   ClassLoader classLoader
-
-  HandlebarsProcessor(){
+  def precompilerMode
+  HandlebarsProcessor(precompiler=false){
     try {
+      this.precompilerMode = precompiler
       classLoader = getClass().getClassLoader()
 
       def handlebarsJsResource = new ClassPathResource('asset/pipeline/handlebars/handlebars.js', classLoader)
