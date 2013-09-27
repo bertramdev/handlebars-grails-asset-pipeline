@@ -1,10 +1,8 @@
 package asset.pipeline.handlebars
-<<<<<<< HEAD
+
 import asset.pipeline.CacheManager
 import asset.pipeline.AssetHelper
-=======
-import java.security.MessageDigest
->>>>>>> version bumping handlebars
+
 
 class HandlebarsAssetFile {
 	static final String contentType = 'application/javascript'
@@ -48,13 +46,6 @@ class HandlebarsAssetFile {
 		// Return File Stream
 	}
 
-
-	def md5Sum(file) {
-		MessageDigest md = MessageDigest.getInstance("MD5")
-		md.update(file.bytes)
-		def checksum = md.digest()
-		return checksum.encodeHex().toString()
-	}
 
 	def directiveForLine(line) {
 		return null
