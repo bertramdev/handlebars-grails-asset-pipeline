@@ -16,6 +16,7 @@ class HandlebarsAssetFile {
 
 	File file
 	def baseFile
+	def encoding
 
 	HandlebarsAssetFile(file, baseFile=null) {
 		this.file = file
@@ -23,7 +24,13 @@ class HandlebarsAssetFile {
 	}
 
 	def processedStream(precompiler=false) {
-		def fileText = file?.text
+		def fileText
+		if(baseFile?.encoding || encoding) {
+			fileText = file?.text(baseFile?.encoding ? baseFile.encoding : encoding)
+		} else {
+			fileText = file?.text
+		}
+
 		def md5 = AssetHelper.getByteDigest(fileText.bytes)
 		if(!precompiler) {
 			def cache = CacheManager.findCache(file.canonicalPath, md5)
