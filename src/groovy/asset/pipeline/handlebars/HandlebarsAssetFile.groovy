@@ -11,7 +11,7 @@ class HandlebarsAssetFile extends AbstractAssetFile {
 	static final String compiledExtension = 'js'
 	static processors = [HandlebarsProcessor]
 
-	def directiveForLine(line) {
+	String directiveForLine(String line) {
 		return null
 	}
 }
