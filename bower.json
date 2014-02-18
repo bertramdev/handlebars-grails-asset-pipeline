@@ -1,0 +1,6 @@
+{
+  "name": "handlebars-grails-asset-pipeline",
+  "directory": "grails-app/assets/javascripts",
+  "dependencies": {
+  }
+}
