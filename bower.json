@@ -2,5 +2,6 @@
   "name": "handlebars-grails-asset-pipeline",
   "directory": "grails-app/assets/javascripts",
   "dependencies": {
+    "handlebars": "~1.3.0"
   }
 }
