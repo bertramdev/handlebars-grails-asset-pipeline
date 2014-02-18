@@ -24,6 +24,19 @@ grails {
 }
 ```
 
+To use the handlebars runtime simply add handlebars js to your application.js or your gsp file
+
+```javascript
+//=require handlebars
+```
+
+If you are taking full advantage of this plugins ability to precompile handlebars files then you just need the runtime.
+
+```javascript
+//=require handlebars-runtime
+```
+
+
 Using in the Browser
 --------------------
 
