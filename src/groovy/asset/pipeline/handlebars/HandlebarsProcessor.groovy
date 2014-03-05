@@ -3,7 +3,7 @@ import asset.pipeline.AssetHelper
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.Scriptable
 import org.springframework.core.io.ClassPathResource
-import org.codehaus.groovy.grails.commons.ApplicationHolder
+import grails.util.Holders
 
 class HandlebarsProcessor {
 
@@ -52,7 +52,7 @@ class HandlebarsProcessor {
   }
 
   def templateNameForFile(assetFile) {
-    def grailsApplication  = ApplicationHolder.getApplication()
+    def grailsApplication  = Holders.grailsApplication
     def templateRoot       = grailsApplication.config.grails.assets.handlebars.templateRoot ?: 'templates'
     def templateSeperator  = grailsApplication.config.grails.assets.handlebars.templatePathSeperator ?: '/'
     def relativePath       = relativePath(assetFile.file, templateRoot, templateSeperator)
