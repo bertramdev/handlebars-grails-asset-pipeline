@@ -12,7 +12,7 @@ class HandlebarsProcessor {
   def precompilerMode
   HandlebarsProcessor(precompiler=false){
     try {
-      this.precompilerMode = precompiler
+      this.precompilerMode = precompiler ? true : false
       classLoader = getClass().getClassLoader()
 
       def handlebarsJsResource = new ClassPathResource('asset/pipeline/handlebars/handlebars.js', classLoader)
