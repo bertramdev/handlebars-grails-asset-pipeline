@@ -3,7 +3,7 @@ import asset.pipeline.handlebars.HandlebarsAssetFile
 
 class HandlebarsAssetPipelineGrailsPlugin {
 
-    def version = "1.3.0.5"
+    def version = "2.0.0"
 
     def grailsVersion = "2.0 > *"
     def title = "Handlebars Asset-Pipeline Plugin"
