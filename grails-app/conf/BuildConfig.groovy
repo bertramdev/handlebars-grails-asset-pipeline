@@ -12,7 +12,7 @@ grails.project.dependency.resolution = {
 	}
 
 	dependencies {
-		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.1.0"
+		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.1.1"
 	}
 
 	plugins {
