@@ -12,12 +12,12 @@ grails.project.dependency.resolution = {
 	}
 
 	dependencies {
-		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.1.1"
+		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.1.2"
 	}
 
 	plugins {
 
-		runtime ":asset-pipeline:2.1.0"
+		runtime ":asset-pipeline:2.1.1"
 
 
 		build ':release:2.2.1', ':rest-client-builder:1.0.3', {

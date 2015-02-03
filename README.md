@@ -44,3 +44,25 @@ Template functions are stored in the `Handlebars.templates` object using the tem
 `person/show`, then the template function can be accessed from `Handlebars.templates['person/show']`. See the Template Names section for how template names are calculated.
 
 See the [Handlebars.js website](http://handlebarsjs.com/) for more information on using Handlebars template functions.
+
+Custom Template Wrapper
+-----------------------
+
+This plugin supports customizing the javascript that is wrapped around the compiled template. It provides access to 2 binded variables `templateName` and `compiledTemplate`. This might be useful if you were namespace isolating the Handlebars runtime as an example:
+
+
+```groovy 
+grails {
+	assets {
+	  handlebers {
+	  	wrapTemplate = '''
+	  	 (function(){
+			var template = HandlebarsCustom.template, templates = HandlebarsCustom.templates = HandlebarsCustom.templates || {};
+				templates['$templateName'] = template($compiledTemplate);
+		}());
+	  	'''
+	  }
+    }
+}
+```
+
