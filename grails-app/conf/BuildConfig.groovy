@@ -10,10 +10,11 @@ grails.project.dependency.resolution = {
 		grailsCentral()
 		grailsPlugins()
 		mavenCentral()
+		jcenter()
 	}
 
 	dependencies {
-		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.1.3"
+		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.1.4"
 	}
 
 	plugins {
