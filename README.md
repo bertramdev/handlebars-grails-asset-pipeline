@@ -8,6 +8,8 @@ For more information on how to use asset-pipeline, visit [here](http://www.githu
 Usage
 -----
 
+By default, this plugin will scan for a copy of handlebars.js in your asset resolver paths. If it can find it, it will use it to compile your handlebars templates. Otherwise it will use an embedded copy of handlebars (4.0.2).
+
 Simply create files in your standard `assets/javascripts` folder with extension `.handlebars` or `.hbs`.
 By default the templateRoot for your template names is specified as blank. This means that any handlebars file within the root assets/javascripts folder will utilize its file name (without the extension) as its template name. Or a file in `templates/show.handlebars` would be named `templates/show`. If templates is set as the templateRoot than it would be named `show`
 
