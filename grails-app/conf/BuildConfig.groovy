@@ -14,13 +14,13 @@ grails.project.dependency.resolution = {
 	}
 
 	dependencies {
-		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.12.10"
+		compile "com.bertramlabs.plugins:handlebars-asset-pipeline:2.13.0"
 		compile 'org.mozilla:rhino:1.7R4'
 	}
 
 	plugins {
 
-		runtime ":asset-pipeline:2.12.10"
+		runtime ":asset-pipeline:2.13.0"
 		
 
 		build ':release:3.1.2', ':rest-client-builder:2.0.1', {
